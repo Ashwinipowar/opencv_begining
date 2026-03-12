@@ -1,4 +1,6 @@
 #can flip by horizontal
+#can also flip by vertical 
+#and both also
 import cv2
 image=cv2.imread("python.png")
 if image is None:
@@ -16,3 +18,4 @@ else:
     cv2.waitKey(0)
 
     cv2.destroyAllWindows()
+
