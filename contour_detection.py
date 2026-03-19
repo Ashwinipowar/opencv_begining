@@ -4,7 +4,7 @@ gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 _,thresh=cv2.threshold(gray,210,255,cv2.THRESH_BINARY)
 
 #find contours
-#this underscore for variable which will we nwwd in future
+#this underscore for variable which will we in future
 
 contours , heirachy =cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
@@ -25,6 +25,12 @@ for contour in contours:
         shape_name="circle"
     else:
         shape_name="unknown"
+        
+# idar niche jo 0 pass kiya hai vo isliye kiya hai qki vo pehli image draw karega joki ahi hamari tringle
+#approx kya hain to =shape ke points hai jo list of corner leke aayengi
+# colour green hai
+#ravel =2D aaray ko 1D main convert karta hai 
+# label hanara means jo text hai vo clearlly vissible ho isliye = -10 hai
 
 cv2.drawContours(img,[approx],0,(0,255,0),2)
 x=approx.ravel()[0]
