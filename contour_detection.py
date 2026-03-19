@@ -36,6 +36,9 @@ cv2.drawContours(img,[approx],0,(0,255,0),2)
 x=approx.ravel()[0]
 y=approx.ravel()[1] - 10
 cv2.putText(img,shape_name,(x,y),cv2.FONT_HERSHEY_COMPLEX,0.6,(0,255,0),2)
+# this 0.6 is for the font size 
+# and colour is green
+# thickness is 2
 
 
 
